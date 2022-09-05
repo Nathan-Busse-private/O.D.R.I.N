@@ -4,7 +4,7 @@
 
 #define TIBIA 45
 
-#define COXA_CCW 80
+#define COXA_CCW 70
 #define COXA_CW 115
 
 #define AC_UP 100
