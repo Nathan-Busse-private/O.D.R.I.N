@@ -245,6 +245,26 @@ void loop()
   for (int i = 0; i <= 2; i++) {
     Deploy();
   }
+}
+void tibia() {
+  A_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  A_tibia.wait();
+
+  B_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  B_tibia.wait();
+
+  C_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  C_tibia.wait();
+
+  D_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  D_tibia.wait();
+
+  E_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  E_tibia.wait();
+
+  F_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  F_tibia.wait();
+}
 
 void Deploy(){
 tibia();
@@ -265,26 +285,8 @@ Deploy7();
 
 Deploy8();
 
-
-void tibia() {
-  A_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  A_tibia.wait();
-
-  B_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  B_tibia.wait();
-
-  C_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  C_tibia.wait();
-
-  D_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  D_tibia.wait();
-
-  E_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  E_tibia.wait();
-
-  F_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
-  F_tibia.wait();
 }
+
 
 void Deploy1() {
   A_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
@@ -332,7 +334,7 @@ void Deploy3() {
   A_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
   A_coxa.wait();
 
-  C_coxa.slowmove(COXA_CCW,DEPLOY_ SPEED);
+  C_coxa.slowmove(COXA_CCW,DEPLOY_SPEED);
   C_coxa.wait();
 
   E_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
@@ -352,7 +354,7 @@ void Deploy4() {
   A_femur.slowmove(Rise, DEPLOY_SPEED);
   A_femur.wait();
 
-  C_femur.slowmove(Rise, DEPLOY_ SPEED);
+  C_femur.slowmove(Rise, DEPLOY_SPEED);
   C_femur.wait();
 
   E_femur.slowmove(Rise, DEPLOY_SPEED);
@@ -451,5 +453,5 @@ void Deploy8() {
 
 };
 
-// Main code here
 
+// Main code here
