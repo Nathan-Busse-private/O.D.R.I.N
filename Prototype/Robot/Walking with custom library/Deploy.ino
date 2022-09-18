@@ -30,11 +30,11 @@ int DOWN = AC_DOWN;
 // New declarations
 
 
- #define DEPLOY_TIBIA 92
-#define Raze_femur 28
+ #define DEPLOY_TIBIA 120
+#define Raze_femur 35
 #define Lower_femur 25
 
-#define DEPLOY_SPEED 200
+#define DEPLOY_SPEED 255
 
 int Rise = Raze_femur;
 int Lower = Lower_femur;
