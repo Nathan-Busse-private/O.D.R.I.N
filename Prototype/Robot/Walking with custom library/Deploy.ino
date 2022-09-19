@@ -179,63 +179,63 @@ void setup()
   F_tibia.attach(6);
 
   // LEG 1
-  A_coxa.write(90, SPEED);
+  A_coxa.write(90, SPEED, true);
   A_coxa.wait();
 
-  A_femur.write(90, SPEED);
+  A_femur.write(90, SPEED, true);
   A_femur.wait();
 
-  A_tibia.write(90, SPEED);
+  A_tibia.write(90, SPEED, true);
   A_tibia.wait();
 
   // LEG 2
-  B_coxa.write(90, SPEED);
+  B_coxa.write(90, SPEED, true);
   B_coxa.wait();
 
-  B_femur.write(90, SPEED);
+  B_femur.write(90, SPEED, true);
   B_femur.wait();
 
-  B_tibia.write(90, SPEED);
+  B_tibia.write(90, SPEED, true);
   B_tibia.wait();
 
   // LEG 3
-  C_coxa.write(90, SPEED);
+  C_coxa.write(90, SPEED, true);
   C_coxa.wait();
 
-  C_femur.write(90, SPEED);
+  C_femur.write(90, SPEED, true);
   C_femur.wait();
 
-  C_tibia.write(90, SPEED);
+  C_tibia.write(90, SPEED, true);
   C_tibia.wait();
 
   // LEG 4
-  D_coxa.write(90, SPEED);
+  D_coxa.write(90, SPEED, true);
   D_coxa.wait();
 
-  D_femur.write(90, SPEED);
+  D_femur.write(90, SPEED, true);
   D_femur.wait();
 
-  D_tibia.write(90, SPEED);
+  D_tibia.write(90, SPEED, true);
   D_tibia.wait();
 
   // LEG 5
-  E_coxa.write(90, SPEED);
+  E_coxa.write(90, SPEED, true);
   E_coxa.wait();
 
-  E_femur.write(90, SPEED);
+  E_femur.write(90, SPEED, true);
   E_femur.wait();
 
-  E_tibia.write(90, SPEED);
+  E_tibia.write(90, SPEED, true);
   E_tibia.wait();
 
   // LEG 6
-  F_coxa.write(90, SPEED);
+  F_coxa.write(90, SPEED, true);
   F_coxa.wait();
 
-  F_femur.write(90, SPEED);
+  F_femur.write(90, SPEED, true);
   F_femur.wait();
 
-  F_tibia.write(90, SPEED);
+  F_tibia.write(90, SPEED, true);
   F_tibia.wait();
 
 }
