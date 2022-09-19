@@ -247,22 +247,22 @@ void loop()
   }
 }
 void tibia() {
-  A_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  A_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   A_tibia.wait();
 
-  B_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  B_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   B_tibia.wait();
 
-  C_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  C_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   C_tibia.wait();
 
-  D_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  D_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   D_tibia.wait();
 
-  E_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  E_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   E_tibia.wait();
 
-  F_tibia.slowmove(DEPLOY_TIBIA, DEPLOY_SPEED);
+  F_tibia.write(DEPLOY_TIBIA, DEPLOY_SPEED);
   F_tibia.wait();
 }
 
@@ -289,166 +289,166 @@ Deploy8();
 
 
 void Deploy1() {
-  A_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  A_coxa.write(COXA_CW, DEPLOY_SPEED);
   A_coxa.wait();
 
-  C_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  C_coxa.write(COXA_CW, DEPLOY_SPEED);
   C_coxa.wait();
 
-  E_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  E_coxa.write(COXA_CCW, DEPLOY_SPEED);
   E_coxa.wait();
 
-  D_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  D_coxa.write(COXA_CW, DEPLOY_SPEED);
   D_coxa.wait();
 
-  F_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  F_coxa.write(COXA_CW, DEPLOY_SPEED);
   F_coxa.wait();
 
-  B_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  B_coxa.write(COXA_CCW, DEPLOY_SPEED);
   B_coxa.wait();
 
 };
 void Deploy2() {
 
-  A_femur.slowmove(Rise, DEPLOY_SPEED);
+  A_femur.write(Rise, DEPLOY_SPEED);
   A_femur.wait();
 
-  C_femur.slowmove(Lower, DEPLOY_SPEED);
+  C_femur.write(Lower, DEPLOY_SPEED);
   C_femur.wait();
 
-  E_femur.slowmove(Lower, DEPLOY_SPEED);
+  E_femur.write(Lower, DEPLOY_SPEED);
   E_femur.wait();
 
-  D_femur.slowmove(Rise, DEPLOY_SPEED);
+  D_femur.write(Rise, DEPLOY_SPEED);
   D_femur.wait();
 
-  F_femur.slowmove(Rise, DEPLOY_SPEED);
+  F_femur.write(Rise, DEPLOY_SPEED);
   F_femur.wait();
 
-  B_femur.slowmove(Rise, DEPLOY_SPEED);
+  B_femur.write(Rise, DEPLOY_SPEED);
   B_femur.wait();
 
 };
 
 void Deploy3() {
-  A_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  A_coxa.write(COXA_CCW, DEPLOY_SPEED);
   A_coxa.wait();
 
-  C_coxa.slowmove(COXA_CCW,DEPLOY_SPEED);
+  C_coxa.write(COXA_CCW,DEPLOY_SPEED);
   C_coxa.wait();
 
-  E_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  E_coxa.write(COXA_CW, DEPLOY_SPEED);
   E_coxa.wait();
 
-  D_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  D_coxa.write(COXA_CCW, DEPLOY_SPEED);
   D_coxa.wait();
 
-  F_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  F_coxa.write(COXA_CCW, DEPLOY_SPEED);
   F_coxa.wait();
 
-  B_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  B_coxa.write(COXA_CW, DEPLOY_SPEED);
   B_coxa.wait();
 
 };
 void Deploy4() {
-  A_femur.slowmove(Rise, DEPLOY_SPEED);
+  A_femur.write(Rise, DEPLOY_SPEED);
   A_femur.wait();
 
-  C_femur.slowmove(Rise, DEPLOY_SPEED);
+  C_femur.write(Rise, DEPLOY_SPEED);
   C_femur.wait();
 
-  E_femur.slowmove(Rise, DEPLOY_SPEED);
+  E_femur.write(Rise, DEPLOY_SPEED);
   E_femur.wait();
 
-  D_femur.slowmove(Lower, DEPLOY_SPEED);
+  D_femur.write(Lower, DEPLOY_SPEED);
   D_femur.wait();
 
-  F_femur.slowmove(Lower, DEPLOY_SPEED);
+  F_femur.write(Lower, DEPLOY_SPEED);
   F_femur.wait();
 
-  B_femur.slowmove(Lower, DEPLOY_SPEED);
+  B_femur.write(Lower, DEPLOY_SPEED);
   B_femur.wait();
 
 };
 
 void Deploy5() {
-  A_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  A_coxa.write(COXA_CW, DEPLOY_SPEED);
   A_coxa.wait();
 
-  C_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  C_coxa.write(COXA_CW, DEPLOY_SPEED);
   C_coxa.wait();
 
-  E_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  E_coxa.write(COXA_CCW, DEPLOY_SPEED);
   E_coxa.wait();
 
-  D_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  D_coxa.write(COXA_CW, DEPLOY_SPEED);
   D_coxa.wait();
 
-  F_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  F_coxa.write(COXA_CW, DEPLOY_SPEED);
   F_coxa.wait();
 
-  B_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  B_coxa.write(COXA_CCW, DEPLOY_SPEED);
   B_coxa.wait();
 
 };
 void Deploy6() {
-  A_femur.slowmove(Lower, DEPLOY_SPEED);
+  A_femur.write(Lower, DEPLOY_SPEED);
   A_femur.wait();
 
-  C_femur.slowmove(Lower, DEPLOY_SPEED);
+  C_femur.write(Lower, DEPLOY_SPEED);
   C_femur.wait();
 
-  E_femur.slowmove(Lower, DEPLOY_SPEED);
+  E_femur.write(Lower, DEPLOY_SPEED);
   E_femur.wait();
 
-  D_femur.slowmove(Rise, DEPLOY_SPEED);
+  D_femur.write(Rise, DEPLOY_SPEED);
   D_femur.wait();
 
-  F_femur.slowmove(Rise, DEPLOY_SPEED);
+  F_femur.write(Rise, DEPLOY_SPEED);
   F_femur.wait();
 
-  B_femur.slowmove(Rise, DEPLOY_SPEED);
+  B_femur.write(Rise, DEPLOY_SPEED);
   B_femur.wait();
 
 };
 
 void Deploy7() {
-  A_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  A_coxa.write(COXA_CCW, DEPLOY_SPEED);
   A_coxa.wait();
 
-  C_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  C_coxa.write(COXA_CCW, DEPLOY_SPEED);
   C_coxa.wait();
 
-  E_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  E_coxa.write(COXA_CW, DEPLOY_SPEED);
   E_coxa.wait();
 
-  D_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  D_coxa.write(COXA_CCW, DEPLOY_SPEED);
   D_coxa.wait();
 
-  F_coxa.slowmove(COXA_CCW, DEPLOY_SPEED);
+  F_coxa.write(COXA_CCW, DEPLOY_SPEED);
   F_coxa.wait();
 
-  B_coxa.slowmove(COXA_CW, DEPLOY_SPEED);
+  B_coxa.write(COXA_CW, DEPLOY_SPEED);
   B_coxa.wait();
 
 };
 void Deploy8() {
-  A_femur.slowmove(Rise, DEPLOY_SPEED);
+  A_femur.write(Rise, DEPLOY_SPEED);
   A_femur.wait();
 
-  C_femur.slowmove(Rise, DEPLOY_SPEED);
+  C_femur.write(Rise, DEPLOY_SPEED);
   C_femur.wait();
 
-  E_femur.slowmove(Rise, DEPLOY_SPEED);
+  E_femur.write(Rise, DEPLOY_SPEED);
   E_femur.wait();
 
-  D_femur.slowmove(Lower, DEPLOY_SPEED);
+  D_femur.write(Lower, DEPLOY_SPEED);
   D_femur.wait();
 
-  F_femur.slowmove(Lower, DEPLOY_SPEED);
+  F_femur.write(Lower, DEPLOY_SPEED);
   F_femur.wait();
 
-  B_femur.slowmove(Lower, DEPLOY_SPEED);
+  B_femur.write(Lower, DEPLOY_SPEED);
   B_femur.wait();
 
 };
