@@ -31,8 +31,8 @@ int DOWN = AC_DOWN;
 
 
  #define DEPLOY_TIBIA 120
-#define Raze_femur 35
-#define Lower_femur 25
+#define Raze_femur 25
+#define Lower_femur 35
 
 #define DEPLOY_SPEED 255
 
