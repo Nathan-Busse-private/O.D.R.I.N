@@ -1,14 +1,6 @@
 #include <Event.h>
 #include <Timer.h>
-
-
-
-
-
-
 #include <HexaServo.h>
-
-
 
 #define SPEED 130
 
@@ -133,8 +125,8 @@ void setup()
   E_coxa.attach(30);
   E_femur.attach(31);
   E_tibia.attach(32
-  
-  );
+
+);
 
   // LEG 6
   F_coxa.attach(8);
@@ -234,8 +226,6 @@ void walkfwd() {
   tri7();
   tri8();
 
-  
-
 }
 
 void walkback() {
@@ -250,7 +240,6 @@ void walkback() {
   b7();
   b8();
 
-  
 }
 
 void walkleft() {
@@ -265,7 +254,6 @@ void walkleft() {
   l7();
   l8();
 
- 
 }
 
 void walkright() {
@@ -280,10 +268,7 @@ void walkright() {
   r7();
   r8();
 
-  
 }
-
-
 
 void tibia() {
   A_tibia.slowmove(TIBIA, SPEED);
@@ -997,11 +982,11 @@ void r8() {
 
 
 
-void Stop(){
+void Stop() {
 
   //  caliberate servo to 90 degrees
 
- // LEG 1
+  // LEG 1
   A_coxa.slowmove(90, SPEED);
   A_coxa.wait();
 
@@ -1123,6 +1108,6 @@ void Stop(){
 
   F_tibia.detach();
   F_tibia.wait();
-  
-  
+
+
 }
