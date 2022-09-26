@@ -19,8 +19,11 @@
 
 long OdrinServo_movetime = 0;
 
+long OdrinServo_wait_time = 0;
+
 int tDelay = 100; // Delay between moves of smooth motion
 
+int wDelay = 5; // Delay wait time between pulses
 
 static servo_t servos[MAX_SERVOS];                          // static array of servo structures
 static volatile int8_t Channel[_Nbr_16timers ];             // counter for the servo being pulsed for each timer (or -1 if refresh interval)
@@ -378,11 +381,12 @@ void OdrinServo::write(int value, uint8_t speed, bool wait) {
   if (wait) { // block until the servo is at its new position
     if (value < MIN_PULSE_WIDTH) {
       while (read() != value) {
-        delay(5);
+        OdrinServo_wait_time = millis() + wDelay;
+      }
       }
     } else {
       while (readMicroseconds() != value) {
-        delay(5);
+        OdrinServo_wait_time = millis() + wDelay;
       }
     }
   }
