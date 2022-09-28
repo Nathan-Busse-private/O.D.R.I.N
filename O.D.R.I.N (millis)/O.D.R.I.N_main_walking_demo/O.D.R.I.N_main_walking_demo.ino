@@ -1,16 +1,19 @@
+#include <TimerFive.h>
+
+#include <TimerOne.h>
+
 #include <OdrinServo.h>
 
-#include <Event.h>
-#include <Timer.h>
+
 
 #define SPEED 130
 
 #define TIBIA 45
 
-#define COXA_CCW 70
+#define COXA_CCW 60
 #define COXA_CW 115
 
-#define AC_UP 100
+#define AC_UP 110
 #define AC_DOWN 92
 
 int UP = AC_UP;
@@ -199,17 +202,17 @@ void setup()
 
 void loop()
 {
-  for (int i = 0; i <= 2; i++) {
+  for (int i = 0; i <= 4; i++) {
     walkfwd();
   }
 
-  for (int j = 0; j <= 2; j++) {
+  for (int j = 0; j <= 4; j++) {
     walkback();
   }
-  for (int k = 0; k <= 2; k++) {
+  for (int k = 0; k <= 4; k++) {
     walkleft();
     {
-      for (int l = 0; l <= 2; l++) {
+      for (int l = 0; l <= 4; l++) {
         walkright();
       }
     }
@@ -1109,6 +1112,5 @@ void Stop() {
 
   F_tibia.detach();
   F_tibia.wait();
-
 
 }
