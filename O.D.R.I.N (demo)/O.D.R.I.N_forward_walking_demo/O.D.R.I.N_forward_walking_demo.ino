@@ -6,7 +6,7 @@
 
 
 
-#define SPEED 70
+#define SPEED 100
 
 #define TIBIA 45
 
