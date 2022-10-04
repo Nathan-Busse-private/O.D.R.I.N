@@ -1,6 +1,6 @@
-#include <TimerFive.h>
 
-#include <TimerOne.h>
+
+
 
 #include <OdrinServo.h>
 
@@ -46,34 +46,34 @@ OdrinServo F_tibia;
 void setup()
 {
   // LEG 1
-  analogWrite(40, OUTPUT);
-  analogWrite(41, OUTPUT);
-  analogWrite(42, OUTPUT);
+  digitalWrite(40, OUTPUT);
+  digitalWrite(41, OUTPUT);
+  digitalWrite(42, OUTPUT);
 
   // LEG 2
-  analogWrite(47, OUTPUT);
-  analogWrite(48, OUTPUT);
-  analogWrite(49, OUTPUT);
+  digitalWrite(47, OUTPUT);
+  digitalWrite(48, OUTPUT);
+  digitalWrite(49, OUTPUT);
 
   // LEG 3
-  analogWrite(51, OUTPUT);
-  analogWrite(52, OUTPUT);
-  analogWrite(53, OUTPUT);
+  digitalWrite(51, OUTPUT);
+  digitalWrite(52, OUTPUT);
+  digitalWrite(53, OUTPUT);
 
   // LEG 4
-  analogWrite(36, OUTPUT);
-  analogWrite(37, OUTPUT);
-  analogWrite(38, OUTPUT);
+  digitalWrite(36, OUTPUT);
+  digitalWrite(37, OUTPUT);
+  digitalWrite(38, OUTPUT);
 
   // LEG 5
-  analogWrite(30, OUTPUT);
-  analogWrite(31, OUTPUT);
-  analogWrite(32, OUTPUT);
+  digitalWrite(30, OUTPUT);
+  digitalWrite(31, OUTPUT);
+  digitalWrite(32, OUTPUT);
 
   // LEG 6
-  analogWrite(8, OUTPUT);
-  analogWrite(7, OUTPUT);
-  analogWrite(6, OUTPUT);
+  digitalWrite(8, OUTPUT);
+  digitalWrite(7, OUTPUT);
+  digitalWrite    (6, OUTPUT);
 
   // LEG 1
   pinMode(40, OUTPUT);
@@ -202,7 +202,7 @@ void setup()
 
 void loop()
 {
-  for (int i = 0; i <= 5; i++) {
+  for (int i=0; i<=4; i++) {
     walkfwd();
   }
   }
