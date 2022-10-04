@@ -9,11 +9,11 @@
 
 //#define INTERVAL 55 // [ms]
 
-#define usToTicks(_us)    (( clockCyclesPerMicrosecond()* _us) / 8)     // converts microseconds to tick (assumes prescale of 8)  // 12 Aug 2009
+#define usToTicks(_us)    (( clockCyclesPerMicrosecond()* _us) / 8)     // converts microseconds to tick (assumes prescale of 8)  
 #define ticksToUs(_ticks) (( (unsigned)_ticks * 8)/ clockCyclesPerMicrosecond() ) // converts from ticks back to microseconds
 
 
-#define TRIM_DURATION       2                               // compensation ticks to trim adjust for digitalWrite delays // 12 August 2009
+#define TRIM_DURATION       2                               // compensation ticks to trim adjust for digitalWrite delays 
 
 //#define NBR_TIMERS        (MAX_SERVOS / SERVOS_PER_TIMER)
 
@@ -245,7 +245,7 @@ OdrinServo::OdrinServo()
 {
   if( ServoCount < MAX_SERVOS) {
     this->servoIndex = ServoCount++;                    // assign a servo index to this instance
-    servos[this->servoIndex].ticks = usToTicks(DEFAULT_PULSE_WIDTH);   // store default values  - 12 Aug 2009
+    servos[this->servoIndex].ticks = usToTicks(DEFAULT_PULSE_WIDTH);   // store default values  
     this->curSeqPosition = 0;
     this->curSequence = initSeq;
   }
@@ -313,7 +313,7 @@ void OdrinServo::writeMicroseconds(int value)
       value = SERVO_MAX();
 
     value -= TRIM_DURATION;
-    value = usToTicks(value);  // convert to ticks after compensating for interrupt overhead - 12 Aug 2009
+    value = usToTicks(value);  // convert to ticks after compensating for interrupt overhead 
 
     uint8_t oldSREG = SREG;
     cli();
@@ -360,7 +360,7 @@ void OdrinServo::write(int value, uint8_t speed) {
       value = constrain(value, SERVO_MIN(), SERVO_MAX());
 
       value = value - TRIM_DURATION;
-      value = usToTicks(value);  // convert to ticks after compensating for interrupt overhead - 12 Aug 2009
+      value = usToTicks(value);  // convert to ticks after compensating for interrupt overhead 
 
       // Set speed and direction
       uint8_t oldSREG = SREG;
@@ -413,7 +413,7 @@ int OdrinServo::readMicroseconds()
 {
   unsigned int pulsewidth;
   if( this->servoIndex != INVALID_SERVO )
-    pulsewidth = ticksToUs(servos[this->servoIndex].ticks)  + TRIM_DURATION ;   // 12 aug 2009
+    pulsewidth = ticksToUs(servos[this->servoIndex].ticks)  + TRIM_DURATION ;   
   else
     pulsewidth  = 0;
 
