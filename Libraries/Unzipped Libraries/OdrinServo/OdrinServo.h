@@ -18,13 +18,13 @@
  *
  */
 
-// Say which 16 bit timers can be used and in what order
+// Say which 10 bit timers can be used and in what order
 #if defined(__AVR_ATmega1280__)  || defined(__AVR_ATmega2560__)
 #define _useTimer5
 #define _useTimer1
 //#define _useTimer3
 //#define _useTimer4
-typedef enum {  _timer5, _timer1, _Nbr_16timers } timer16_Sequence_t ;
+typedef enum {  _timer5, _timer1, _Nbr_10timers, _Nbr_8timers } timer10_Sequence_t;
 
 #elif defined(__AVR_ATmega32U4__)
 #define _useTimer3
@@ -38,12 +38,12 @@ typedef enum { _timer3, _timer1, _Nbr_16timers } timer16_Sequence_t ;
 
 #elif defined(__AVR_ATmega128__) ||defined(__AVR_ATmega1281__)||defined(__AVR_ATmega2561__)
 #define _useTimer5
-//#define _useTimer1
-typedef enum { _timer5, _timer1,  _Nbr_16timers } timer16_Sequence_t ;
+#define _useTimer1
+typedef enum { _timer5, _timer1,  _Nbr_10timers, _Nbr_8timers } timer10_Sequence_t ;
 
 #else  // everything else
 #define _useTimer5
-typedef enum { _timer5, _Nbr_16timers } timer16_Sequence_t ;
+typedef enum { _timer5, _timer1, _Nbr_10timers, _Nbr_8timers } timer10_Sequence_t ;
 #endif
 
 #define OdrinServo_VERSION           1      // software version of this library
@@ -54,7 +54,7 @@ typedef enum { _timer5, _Nbr_16timers } timer16_Sequence_t ;
 #define REFRESH_INTERVAL    36000     // minimum time to refresh servos in microseconds
 
 #define SERVOS_PER_TIMER       7     // the maximum number of servos controlled by one timer
-#define MAX_SERVOS   (_Nbr_16timers  * SERVOS_PER_TIMER)
+#define MAX_SERVOS   (_Nbr_10timers  * SERVOS_PER_TIMER)
 
 #define INVALID_SERVO         255     // flag indicating an invalid servo index
 
