@@ -1,5 +1,5 @@
 /*
-  OdrinServo.h - Interrupt driven Servo library for Arduino using 16 bit timers- Version 1
+  OdrinServo.h - Interrupt driven Servo library for Arduino using 10 bit timers- Version 5
   Nathan-Busse
   
  */
@@ -10,15 +10,15 @@
 #include <inttypes.h>
 
 /*
- * Defines for 16 bit timers used with  Servo library
+ * Defines for 10 bit timers used with  Servo library
  *
- * If _useTimerX is defined then TimerX is a 16 bit timer on the curent board
+ * If _useTimerX is defined then TimerX is a 10 bit timer on the curent board
  * timer10_Sequence_t enumerates the sequence that the timers should be allocated
- * _Nbr_10timers indicates how many 16 bit timers are available.
+ * _Nbr_10timers indicates how many 10 bit timers are available.
  *
  */
 
-// Say which 16 bit timers can be used and in what order
+// Say which 10 bit timers can be used and in what order
 #if defined(__AVR_ATmega1280__)  || defined(__AVR_ATmega2560__)
 #define _useTimer5
 #define _useTimer1
@@ -46,7 +46,7 @@ typedef enum { _timer3, _timer1, _Nbr_10timers } timer10_Sequence_t ;
 typedef enum { _timer1, _Nbr_10timers } timer10_Sequence_t ;
 #endif
 
-#define OdrinServo_VERSION           1      // software version of this library
+#define OdrinServo_VERSION           5      // software version of this library
 
 #define MIN_PULSE_WIDTH       544     // the shortest pulse sent to a servo
 #define MAX_PULSE_WIDTH      2400     // the longest pulse sent to a servo
