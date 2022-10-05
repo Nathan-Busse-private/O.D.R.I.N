@@ -35,73 +35,74 @@ OdrinServo F_tibia;
 void setup()
 {
   // LEG 1
+  digitalWrite(2, OUTPUT);
+  digitalWrite(3, OUTPUT);
+  digitalWrite(4, OUTPUT);
+
+  // LEG 2
+  digitalWrite(5, OUTPUT);
+  digitalWrite(6, OUTPUT);
   digitalWrite(7, OUTPUT);
+
+  // LEG 3
   digitalWrite(8, OUTPUT);
   digitalWrite(9, OUTPUT);
-
-  // LEG 3
   digitalWrite(10, OUTPUT);
+
+ 
+
+  // LEG 4
   digitalWrite(11, OUTPUT);
   digitalWrite(12, OUTPUT);
+  digitalWrite(13, OUTPUT);
 
-  // LEG 4
-  digitalWrite(14, OUTPUT);
-  digitalWrite(15, OUTPUT);
-  digitalWrite(16, OUTPUT);
+  // LEG 1
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
 
  
 
-  // LEG 6
-  digitalWrite(17, OUTPUT);
-  digitalWrite(18, OUTPUT);
-  digitalWrite(19, OUTPUT);
-
-  // LEG 1
+  // LEG 2
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
+
+  // LEG 3
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
-
- 
-
-  // LEG 3
   pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
-
-  // LEG 4
-  pinMode(14, OUTPUT);
-  pinMode(15, OUTPUT);
-  pinMode(16, OUTPUT);
 
  
-  // LEG 6
-  pinMode(17, OUTPUT);
-  pinMode(18, OUTPUT); 
-  pinMode(19, OUTPUT);
+  // LEG 4
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT); 
+  pinMode(13, OUTPUT);
 
   // LEG 1
-  A_coxa.attach(7);
-  A_femur.attach(8);
-  A_tibia.attach(9);
+  A_coxa.attach(2);
+  A_femur.attach(3);
+  A_tibia.attach(4);
 
 
+
+  // LEG 2
+  C_coxa.attach(5);
+  C_femur.attach(6);
+  C_tibia.attach(7);
 
   // LEG 3
-  C_coxa.attach(10);
-  C_femur.attach(11);
-  C_tibia.attach(12);
-
-  // LEG 4
-  D_coxa.attach(14);
-  D_femur.attach(15);
-  D_tibia.attach(16);
+  D_coxa.attach(8);
+  D_femur.attach(9);
+  D_tibia.attach(10);
 
  
-  // LEG 6
-  F_coxa.attach(17);
-  F_femur.attach(18);
-  F_tibia.attach(19);
+  // LEG 4
+  F_coxa.attach(11);
+  F_femur.attach(12);
+  F_tibia.attach(13);
 
+/*
 
   // LEG 1
   A_coxa.write(90, SPEED);
@@ -115,7 +116,7 @@ void setup()
 
   
 
-  // LEG 3
+  // LEG 2
   C_coxa.write(90, SPEED);
   C_coxa.wait();
 
@@ -125,7 +126,7 @@ void setup()
   C_tibia.write(90, SPEED);
   C_tibia.wait();
 
-  // LEG 4
+  // LEG 3
   D_coxa.write(90, SPEED);
   D_coxa.wait();
 
@@ -137,7 +138,7 @@ void setup()
 
   
 
-  // LEG 6
+  // LEG 4
   F_coxa.write(90, SPEED);
   F_coxa.wait();
 
@@ -147,6 +148,7 @@ void setup()
   F_tibia.write(90, SPEED);
   F_tibia.wait();
 
+*/
 }
 
 void loop()
