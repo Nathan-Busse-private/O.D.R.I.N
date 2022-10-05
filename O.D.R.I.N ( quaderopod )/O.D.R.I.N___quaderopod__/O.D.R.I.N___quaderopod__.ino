@@ -1,0 +1,260 @@
+
+#include <OdrinServo.h>
+
+#define SPEED 100
+
+#define TIBIA 45
+
+#define COXA_CCW 115
+#define COXA_CW 60
+
+#define AC_UP 100
+#define AC_DOWN 92
+
+int UP = AC_UP;
+int DOWN = AC_DOWN;
+
+OdrinServo A_coxa;
+OdrinServo A_femur;
+OdrinServo A_tibia;
+
+
+
+OdrinServo C_coxa;
+OdrinServo C_femur;
+OdrinServo C_tibia;
+
+OdrinServo D_coxa;
+OdrinServo D_femur;
+OdrinServo D_tibia;
+
+OdrinServo F_coxa;
+OdrinServo F_femur;
+OdrinServo F_tibia;
+
+void setup()
+{
+  // LEG 1
+  digitalWrite(7, OUTPUT);
+  digitalWrite(8, OUTPUT);
+  digitalWrite(9, OUTPUT);
+
+  // LEG 3
+  digitalWrite(10, OUTPUT);
+  digitalWrite(11, OUTPUT);
+  digitalWrite(12, OUTPUT);
+
+  // LEG 4
+  digitalWrite(14, OUTPUT);
+  digitalWrite(15, OUTPUT);
+  digitalWrite(16, OUTPUT);
+
+ 
+
+  // LEG 6
+  digitalWrite(17, OUTPUT);
+  digitalWrite(18, OUTPUT);
+  digitalWrite(19, OUTPUT);
+
+  // LEG 1
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+
+ 
+
+  // LEG 3
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+
+  // LEG 4
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(16, OUTPUT);
+
+ 
+  // LEG 6
+  pinMode(17, OUTPUT);
+  pinMode(18, OUTPUT); 
+  pinMode(19, OUTPUT);
+
+  // LEG 1
+  A_coxa.attach(7);
+  A_femur.attach(8);
+  A_tibia.attach(9);
+
+
+
+  // LEG 3
+  C_coxa.attach(10);
+  C_femur.attach(11);
+  C_tibia.attach(12);
+
+  // LEG 4
+  D_coxa.attach(14);
+  D_femur.attach(15);
+  D_tibia.attach(16);
+
+ 
+  // LEG 6
+  F_coxa.attach(17);
+  F_femur.attach(18);
+  F_tibia.attach(19);
+
+
+  // LEG 1
+  A_coxa.write(90, SPEED);
+  A_coxa.wait();
+
+  A_femur.write(90, SPEED);
+  A_femur.wait();
+
+  A_tibia.write(90, SPEED);
+  A_tibia.wait();
+
+  
+
+  // LEG 3
+  C_coxa.write(90, SPEED);
+  C_coxa.wait();
+
+  C_femur.write(90, SPEED);
+  C_femur.wait();
+
+  C_tibia.write(90, SPEED);
+  C_tibia.wait();
+
+  // LEG 4
+  D_coxa.write(90, SPEED);
+  D_coxa.wait();
+
+  D_femur.write(90, SPEED);
+  D_femur.wait();
+
+  D_tibia.write(90, SPEED);
+  D_tibia.wait();
+
+  
+
+  // LEG 6
+  F_coxa.write(90, SPEED);
+  F_coxa.wait();
+
+  F_femur.write(90, SPEED);
+  F_femur.wait();
+
+  F_tibia.write(90, SPEED);
+  F_tibia.wait();
+
+}
+
+void loop()
+{
+  for (int i = 0; i < 4; i++) {
+    walkfwd();
+  }
+  }
+
+void walkfwd() {
+  tibia();
+  tri1();
+  tri2();
+  tri3();
+  tri4();
+
+  
+
+}
+
+void tibia() {
+  A_tibia.slowmove(TIBIA, SPEED);
+  A_tibia.wait();
+
+ 
+
+  C_tibia.slowmove(TIBIA, SPEED);
+  C_tibia.wait();
+
+  D_tibia.slowmove(TIBIA, SPEED);
+  D_tibia.wait();
+
+  
+
+  F_tibia.slowmove(TIBIA, SPEED);
+  F_tibia.wait();
+}
+
+void tri1() {
+  A_coxa.slowmove(COXA_CW, SPEED);
+  A_coxa.wait();
+
+  C_coxa.slowmove(COXA_CW, SPEED);
+  C_coxa.wait();
+
+ 
+
+  D_coxa.slowmove(COXA_CW, SPEED);
+  D_coxa.wait();
+
+  F_coxa.slowmove(COXA_CW, SPEED);
+  F_coxa.wait();
+
+  
+
+};
+void tri2() {
+  A_femur.slowmove(DOWN, SPEED);
+  A_femur.wait();
+
+  C_femur.slowmove(DOWN, SPEED);
+  C_femur.wait();
+
+  
+
+  D_femur.slowmove(UP, SPEED);
+  D_femur.wait();
+
+  F_femur.slowmove(UP, SPEED);
+  F_femur.wait();
+
+  
+
+};
+
+void tri3() {
+  A_coxa.slowmove(COXA_CCW, SPEED);
+  A_coxa.wait();
+
+  C_coxa.slowmove(COXA_CCW, SPEED);
+  C_coxa.wait();
+
+  
+
+  D_coxa.slowmove(COXA_CCW, SPEED);
+  D_coxa.wait();
+
+  F_coxa.slowmove(COXA_CCW, SPEED);
+  F_coxa.wait();
+
+  
+
+};
+void tri4() {
+  A_femur.slowmove(UP, SPEED);
+  A_femur.wait();
+
+  C_femur.slowmove(UP, SPEED);
+  C_femur.wait();
+
+  
+
+  D_femur.slowmove(DOWN, SPEED);
+  D_femur.wait();
+
+  F_femur.slowmove(DOWN, SPEED);
+  F_femur.wait();
+
+ 
+
+};
