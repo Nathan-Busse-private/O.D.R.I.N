@@ -3,3 +3,8 @@
 
 
 Software development for my Omni-Directional-Robotic-Invertebrate robot
+
+
+#Planning 
+
+
