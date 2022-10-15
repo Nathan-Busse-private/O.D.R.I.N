@@ -1,9 +1,4 @@
-/*
-    Arduino Ant Robot / Hexapod - RC control using the NRF24L01 Transceiver module
-    = Receiver Code =
-    by Dejan, https://howtomechatronics.com
-    Library: TMRh20/RF24, https://github.com/tmrh20/RF24/
-*/
+
 
 
 #include <SPI.h>
