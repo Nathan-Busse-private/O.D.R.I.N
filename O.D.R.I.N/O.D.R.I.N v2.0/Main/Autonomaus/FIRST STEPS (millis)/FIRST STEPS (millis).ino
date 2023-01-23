@@ -22,9 +22,9 @@ const unsigned long wait = 100;  //the value is a number of milliseconds
 Leg A
 -------
 */
-#define coxa_A 0
-#define femur_A 1
-#define tibia_A 2
+#define coxa_A 12
+#define femur_A 13
+#define tibia_A 14
 
 /*
 -------
@@ -40,9 +40,9 @@ Leg B
 Leg C
 -------
 */
-#define coxa_C 8
-#define femur_C 9
-#define tibia_C 10
+#define coxa_C 0
+#define femur_C 1
+#define tibia_C 2
 
 
 //Right (Board 2)
@@ -51,9 +51,9 @@ Leg C
 Leg D
 -------
 */
-#define coxa_D 0
-#define femur_D 1
-#define tibia_D 2
+#define coxa_D 12
+#define femur_D 13
+#define tibia_D 14
 
 /*
 -------
@@ -69,9 +69,9 @@ Leg E
 Leg F
 -------
 */
-#define coxa_F 8
-#define femur_F 9
-#define tibia_F 10
+#define coxa_F 0
+#define femur_F 1
+#define tibia_F 2
 
 //Min and Max pulse values
 
@@ -120,7 +120,7 @@ void setServoPulse(uint8_t n, double pulse) {
   left.setPWM(n, 0, pulse);
   degrees = map(pulselength, SERVOMIN, SERVOMAX, 0, 90);
 
-  // Boserfs
+  // Board 2
 
   right.setPWM(n, 0, pulse);
   degrees = map(pulselength, SERVOMIN, SERVOMAX, 0, 90);
