@@ -1,7 +1,7 @@
 #include <SPI.h>
 #include <RF24.h>
 RF24 radio(9, 10); // CE, CSN
-const byte address[6] = “00001”;
+const byte address[6] = "00001";
 int joy[6];
 
 void setup() {
