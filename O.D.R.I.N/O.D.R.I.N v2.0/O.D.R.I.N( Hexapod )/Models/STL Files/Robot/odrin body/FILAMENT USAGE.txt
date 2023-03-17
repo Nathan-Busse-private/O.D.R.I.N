@@ -1,7 +1,0 @@
-X1 = 233 grams
-X2 = 10 grams
-X6 = 84 grams
-X24 = 24 grams
-
- 351 grams used
------------------>
